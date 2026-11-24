@@ -1,0 +1,531 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    color: #1e293b;
+}
+
+/* ==================== NAVEGAÇÃO ==================== */
+nav {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 3px 12px #00000020;
+    padding: 12px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 999;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-box {
+    height: 44px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    max-height: 100%;
+    max-width: 170px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #1e293b;
+    opacity: 0.75;
+    transition: all 200ms ease-in-out;
+}
+
+.nav-item:hover {
+    opacity: 1;
+    color: #15803d;
+}
+
+.nav-item p {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Menu Mobile */
+.wrap-open {
+    display: none;
+    font-size: 26px;
+    color: #15803d;
+    cursor: pointer;
+    user-select: none;
+}
+
+#menu-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #14532d;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    z-index: 1000;
+}
+
+#menu-mobile a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-fechar {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: #ffffff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ==================== SEÇÃO 1 (CAPA) ==================== */
+.s1 {
+    min-height: 92vh;
+    padding: 120px 20px 60px 20px;
+    background-color: #14532d;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.wrap-divs {
+    max-width: 820px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo-capa {
+    background-color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+}
+
+.logo-capa .logo-img {
+    max-height: 68px;
+    max-width: 240px;
+}
+
+.badge-equipe {
+    background-color: #15803d;
+    color: #ffffff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid #22c55e;
+}
+
+.s1 h1 {
+    font-size: 46px;
+    line-height: 1.15;
+}
+
+.slogan {
+    font-size: 22px;
+    font-weight: bold;
+    color: #86efac;
+}
+
+.subtitulo {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #e2e8f0;
+    max-width: 640px;
+}
+
+.botoes-capa {
+    display: flex;
+    gap: 14px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-primario {
+    background-color: #22c55e;
+    color: #052e16;
+    border: none;
+    padding: 14px 26px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-primario:hover {
+    background-color: #4ade80;
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-secundario:hover {
+    background-color: #15803d;
+}
+
+/* ==================== SEÇÕES GERAIS ==================== */
+.secao-branca {
+    background-color: #ffffff;
+    padding: 80px 20px;
+}
+
+.secao-cinza {
+    background-color: #f1f5f9;
+    padding: 80px 20px;
+}
+
+.secao-verde-solida {
+    background-color: #15803d;
+    color: #ffffff;
+    padding: 80px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.titulo-secao {
+    font-size: 32px;
+    color: #14532d;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.descricao-secao {
+    text-align: center;
+    color: #475569;
+    margin-bottom: 32px;
+    font-size: 16px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.card-solido {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.card-destaque-verde {
+    background-color: #f0fdf4;
+    border: 1px solid #86efac;
+}
+
+.card-escuro {
+    background-color: #1e293b;
+    border: 1px solid #0f172a;
+    color: #ffffff;
+}
+
+.tag-slide {
+    display: inline-block;
+    background-color: #dcfce7;
+    color: #166534;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.tag-clara {
+    background-color: #15803d;
+    color: #ffffff;
+}
+
+.card-solido h3 {
+    font-size: 22px;
+    margin-bottom: 14px;
+}
+
+.card-solido p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #334155;
+}
+
+.texto-claro {
+    color: #cbd5e1 !important;
+    margin-bottom: 14px;
+}
+
+/* Listas */
+.lista-check {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lista-check li {
+    font-size: 16px;
+    color: #334155;
+    padding-left: 24px;
+    position: relative;
+}
+
+.lista-check li::before {
+    content: "✔";
+    color: #15803d;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.lista-clara li {
+    color: #f8fafc;
+}
+
+.lista-clara li::before {
+    color: #4ade80;
+}
+
+/* ==================== ABAS DE DESPERDÍCIOS ==================== */
+.abas-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.aba-btn {
+    background-color: #ffffff;
+    color: #1e293b;
+    border: 2px solid #cbd5e1;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.aba-btn.ativa,
+.aba-btn:hover {
+    background-color: #15803d;
+    color: #ffffff;
+    border-color: #15803d;
+}
+
+.painel-aba {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-left: 6px solid #15803d;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.painel-aba h3 {
+    font-size: 22px;
+    color: #14532d;
+    margin-bottom: 10px;
+}
+
+.painel-aba p {
+    color: #475569;
+    margin-bottom: 16px;
+}
+
+.lista-problemas {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.lista-problemas li {
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* ==================== ECOTRACK SIMULAÇÃO ==================== */
+.btn-simular {
+    margin-top: 18px;
+    background-color: #22c55e;
+    color: #052e16;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.status-box {
+    margin-top: 12px;
+    background-color: #0f172a;
+    color: #86efac !important;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 14px !important;
+    font-family: monospace;
+}
+
+/* ==================== CONCLUSÃO E FORMULÁRIO ==================== */
+.bloco-conclusao {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.bloco-conclusao h2 {
+    font-size: 30px;
+}
+
+.bloco-conclusao p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #f0fdf4;
+}
+
+.form-contato {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.form-contato input {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    width: 240px;
+}
+
+.btn-branco {
+    background-color: #ffffff;
+    color: #14532d;
+    border: none;
+    padding: 12px 22px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-branco:hover {
+    background-color: #dcfce7;
+}
+
+.msg-retorno {
+    font-weight: bold;
+    color: #bbf7d0 !important;
+}
+
+/* ==================== RODAPÉ ==================== */
+footer {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-footer {
+    background-color: #ffffff;
+    padding: 6px 14px;
+    height: auto;
+}
+
+.credito-equipe {
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+/* ==================== RESPONSIVO ==================== */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .wrap-open {
+        display: block;
+    }
+
+    .s1 h1 {
+        font-size: 32px;
+    }
+
+    .grid-2,
+    .lista-problemas {
+        grid-template-columns: 1fr;
+    }
+}

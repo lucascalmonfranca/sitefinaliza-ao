@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoLog Soluções Logísticas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barra de Navegação -->
+    <nav>
+        <div class="nav-container">
+            <!-- Logo no topo da página -->
+            <a href="#inicio" class="logo-box" title="EcoLog Soluções Logísticas">
+                <img src="../assets/images/bg.png" alt="Logo EcoLog" class="logo-img">
+            </a>
+
+            <div class="nav-links">
+                <a class="nav-item" href="#inicio"><p>Início</p></a>
+                <a class="nav-item" href="#empresa"><p>A Empresa</p></a>
+                <a class="nav-item" href="#problemas"><p>Desperdícios</p></a>
+                <a class="nav-item" href="#solucoes"><p>Soluções & EcoTrack</p></a>
+                <a class="nav-item" href="#sustentabilidade"><p>Sustentabilidade</p></a>
+                <a class="nav-item" href="#contato"><p>Contato</p></a>
+            </div>
+
+            <!-- Botão Menu Mobile -->
+            <div id="wrap-open" class="wrap-open" onclick="abrir()">
+                <span>☰</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Mobile -->
+    <div id="menu-mobile">
+        <span class="btn-fechar" onclick="fechar()">✕</span>
+        <a href="#inicio" onclick="fechar()">Início</a>
+        <a href="#empresa" onclick="fechar()">A Empresa</a>
+        <a href="#problemas" onclick="fechar()">Desperdícios</a>
+        <a href="#solucoes" onclick="fechar()">Soluções & EcoTrack</a>
+        <a href="#sustentabilidade" onclick="fechar()">Sustentabilidade</a>
+        <a href="#contato" onclick="fechar()">Contato</a>
+    </div>
+
+    <!-- SLIDE 1: CAPA (INÍCIO) -->
+    <section id="inicio" class="s1">
+        <div class="wrap-divs">
+            <!-- Logo no início da capa -->
+            <div class="logo-capa">
+                <img src="../assets/images/bg.png" alt="Logo EcoLog Soluções Logísticas" class="logo-img">
+            </div>
+
+            <span class="badge-equipe">Equipe 5 • Logística Inteligente</span>
+            <h1>EcoLog Soluções Logísticas</h1>
+            <p class="slogan">Menos desperdício, mais eficiência!</p>
+            <p class="subtitulo">
+                Especialistas em reduzir desperdícios nos processos logísticos, ajudando outras empresas a economizar dinheiro, tempo e recursos naturais.
+            </p>
+            <div class="botoes-capa">
+                <button class="btn-primario" onclick="irParaContato()">Falar com a EcoLog</button>
+                <button class="btn-secundario" onclick="praBaixo()">Ir para o Final ↓</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDES 2 e 3: APRESENTAÇÃO E OBJETIVO -->
+    <section id="empresa" class="secao-branca">
+        <div class="container">
+            <h2 class="titulo-secao">Quem Somos & Nosso Objetivo</h2>
+            <div class="grid-2">
+                <div class="card-solido">
+                    <span class="tag-slide">Apresentação da Empresa</span>
+                    <h3>O que fazemos</h3>
+                    <p>
+                        A <strong>EcoLog</strong> é uma empresa especializada em reduzir desperdícios nos processos logísticos, ajudando outras empresas a economizar <strong>dinheiro, tempo e recursos naturais</strong>.
+                    </p>
+                </div>
+
+                <div class="card-solido card-destaque-verde">
+                    <span class="tag-slide">Objetivo da Empresa</span>
+                    <h3>Nossa Missão</h3>
+                    <p>
+                        Nosso objetivo é melhorar o <strong>armazenamento, o transporte e a distribuição</strong> de mercadorias, evitando perdas e aumentando a eficiência das operações.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDES 4, 5, 6 e 7: PROBLEMAS E DESPERDÍCIOS -->
+    <section id="problemas" class="secao-cinza">
+        <div class="container">
+            <h2 class="titulo-secao">Onde estão os desperdícios na logística?</h2>
+            <p class="descricao-secao">Clique nas categorias abaixo para visualizar os principais gargalos identificados pela EcoLog.</p>
+
+            <div class="abas-botoes">
+                <button class="aba-btn ativa" onclick="mudarAba('geral', this)">Problemas Gerais</button>
+                <button class="aba-btn" onclick="mudarAba('estoques', this)">Nos Estoques</button>
+                <button class="aba-btn" onclick="mudarAba('transporte', this)">No Transporte</button>
+                <button class="aba-btn" onclick="mudarAba('distribuicao', this)">Na Distribuição</button>
+            </div>
+
+            <div id="conteudo-aba" class="painel-aba">
+                <!-- Preenchido via script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDES 8 e 9: SOLUÇÕES E SISTEMA ECOTRACK -->
+    <section id="solucoes" class="secao-branca">
+        <div class="container">
+            <h2 class="titulo-secao">Nossas Soluções & Tecnologia EcoTrack</h2>
+
+            <div class="grid-2">
+                <!-- Slide 8 -->
+                <div class="card-solido">
+                    <span class="tag-slide">Nossas Soluções</span>
+                    <h3>Ações práticas para zerar perdas</h3>
+                    <ul class="lista-check">
+                        <li>Melhor planejamento de rotas</li>
+                        <li>Controle rigoroso de estoque</li>
+                        <li>Organização inteligente dos depósitos</li>
+                        <li>Reaproveitamento de embalagens</li>
+                        <li>Monitoramento contínuo das entregas</li>
+                    </ul>
+                </div>
+
+                <!-- Slide 9 -->
+                <div class="card-solido card-escuro">
+                    <span class="tag-slide tag-clara">Tecnologia na Logística</span>
+                    <h3>Sistema EcoTrack</h3>
+                    <p class="texto-claro">Nossa plataforma proprietária de rastreamento e gestão permite:</p>
+                    <ul class="lista-check lista-clara">
+                        <li>Acompanhar mercadorias em tempo real</li>
+                        <li>Controlar entradas e saídas</li>
+                        <li>Identificar produtos próximos do vencimento</li>
+                        <li>Planejar entregas com precisão</li>
+                        <li>Monitorar toda a frota de veículos</li>
+                    </ul>
+                    <button class="btn-simular" onclick="simularEcoTrack()">Atualizar Status do EcoTrack</button>
+                    <p id="status-ecotrack" class="status-box">Status: 100% da frota monitorada • 0 alertas críticos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDES 10 e 11: SUSTENTABILIDADE E BENEFÍCIOS -->
+    <section id="sustentabilidade" class="secao-cinza">
+        <div class="container">
+            <h2 class="titulo-secao">Sustentabilidade & Benefícios</h2>
+
+            <div class="grid-2">
+                <!-- Slide 10 -->
+                <div class="card-solido">
+                    <span class="tag
